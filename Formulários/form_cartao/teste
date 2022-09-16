@@ -1,0 +1,38 @@
+else if($operacao== "exibir"){
+        $sql= "SELECT * FROM cliente";
+        $res= mysqli_query($mysqli,$sql);
+        $linhas= mysqli_num_rows($res);
+
+        for ($i = 0; $i < $linhas; $i++){
+            $cliente = mysqli_fetch_array ($res);
+
+        }
+
+        echo "<div class='container'>
+        <h1>Tabela Básica</h1>
+        <table class='table'>
+        <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Data de Nascimento</th>
+        <th>Bandeira do Cartão</th>
+        </tr>
+        </thead>
+        ";for ($i = 0; $i < $linhas; $i++){
+            $cliente = mysqli_fetch_array ($res);
+
+            echo "<tbody>
+            <tr>
+            <td>".$cliente['nome']."</td>
+            <td>".$cliente['email']."</td>
+            <td>".$cliente['data_nasc']."</td>
+            <td>".$cliente['cartao']."</td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            ";
+
+        };
+    }               
