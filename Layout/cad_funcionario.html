@@ -105,11 +105,10 @@
             </div>
           </div>
 
-          <div id="cad_clientte" class="block">
-            <div class="container">
 
               <div class="registration-form">
-                <form>
+                <form action="receber_cad.php" method="REQUEST">
+                  <input type="hidden" name="cad" value="funcionario">
                     <div class="form-icon">
                         <span><i class="icon fas fa-hospital"></i></span>
                     </div>
@@ -117,29 +116,29 @@
                     <h5 class="text-uppercase">Cadastrar Funcionário:</h5>
                     <br>
                     <div class="form-group">
-                        <input type="text" class="form-control item" id="username" placeholder="Nome Completo">
+                        <input type="text" class="form-control item" name="nome" placeholder="Nome Completo">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control item" id="crm" placeholder="CRM">
+                        <input type="text" class="form-control item" name="crm" placeholder="CRM">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control item" id="especialidade" placeholder="Especialidade">
+                        <input type="text" class="form-control item" name="especialidade" placeholder="Especialidade">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control item" id="telefone" placeholder="Telefone">
+                        <input type="text" class="form-control item" name="telefone" placeholder="Telefone">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control item" id="data_nasc" placeholder="Data de Nascimento">
+                        <input type="text" class="form-control item" name="data_nasc" placeholder="Data de Nascimento">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control item" id="email" placeholder="Email">
+                        <input type="text" class="form-control item" name="email" placeholder="Email">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control item" id="senha" placeholder="Senha">
+                        <input type="password" class="form-control item" name="senha" placeholder="Senha">
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-block create-account">Registrar</button>
+                        <button type="submit" class="btn btn-block create-account">Registrar</button>
                     </div>
                 </form>
 

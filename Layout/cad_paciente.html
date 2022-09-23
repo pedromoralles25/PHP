@@ -55,34 +55,34 @@
         <div class="container">
 
           <div class="registration-form">
-            <form>
+            <form action="receber_cad.php" method="REQUEST">
+              <input type="hidden" name="cad" value="paciente">
                 <div class="form-icon">
                     <span><i class="icon far fa-id-card"></i></span>
-                </div>
-                
+                </div>   
                 <h5 class="text-uppercase">Cadastre-se:</h5>
                 <br>
-                <div class="form-group">
-                    <input type="text" class="form-control item" id="username" placeholder="Nome Completo">
+                <div class="form-group">  
+                  <input type="text" class="form-control item" name="nome" placeholder="Nome Completo">                 
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control item" id="cpf" placeholder="CPF">
+                    <input type="text" class="form-control item" name="cpf" placeholder="CPF">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control item" id="telefone" placeholder="Telefone">
+                    <input type="text" class="form-control item" name="telefone" placeholder="Telefone">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control item" id="data_nasc" placeholder="Data de Nascimento">
+                    <input type="text" class="form-control item" name="data_nasc" placeholder="Data de Nascimento">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control item" id="email" placeholder="Email">
+                    <input type="email" class="form-control item" name="email" placeholder="Email">
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-control item" id="senha" placeholder="Senha">
+                    <input type="password" class="form-control item" name="senha" placeholder="Senha">
                 </div>
                 <div class="form-group">
-                    <button type="button" class="btn btn-block create-account">Enviar</button>
+                    <button type="submit" class="btn btn-block create-account">Enviar</button>
                 </div>
             </form>
 

@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
      include "conecta_mysql.inc"; 
      $cod_usuario = $_GET ["cod_usuario"];
      $sql= "SELECT * FROM cliente WHERE cod_usuario = $cod_usuario;";

@@ -1,7 +1,7 @@
-CREATE USER 'usuario'@'localhost' IDENTIFIED BY '123'; 
-GRANT ALL PRIVILEGES ON ds302.* TO 'usuario'@'localhost';
+CREATE USER 'admin'@'localhost' IDENTIFIED BY '123'; 
+GRANT ALL PRIVILEGES ON ds302.* TO 'admin'@'localhost';
 
-CREATE TABLE cliente ( 
+CREATE TABLE paciente ( 
     cod_usuario int NOT NULL AUTO_INCREMENT, 
     nome varchar(30) NOT NULL, 
     cpf varchar(20) NOT NULL, 
