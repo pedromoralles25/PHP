@@ -3,10 +3,11 @@
 
 <?php
 
-$cadastro= $_REQUEST["cad"];
+$cad_paciente= $_REQUEST["cad_paciente"];
+$cad_funcionario= $_REQUEST["cad_funcionario"];
 
 
-if ($cadastro=="paciente"){
+if ($cad_paciente=="paciente"){
 
     $nome = $_REQUEST["nome"]; 
     $cpf = $_REQUEST["cpf"]; 
@@ -22,7 +23,7 @@ if ($cadastro=="paciente"){
 
  }
 
- elseif ($cadastro=="funcionario"){
+ elseif ($cad_funcionario=="funcionario"){
 
     $nome = $_REQUEST["nome"]; 
     $crm = $_REQUEST["crm"]; 
