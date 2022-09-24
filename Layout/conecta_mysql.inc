@@ -1,5 +1,5 @@
 <?php
 
-  $mysqli = mysqli_connect("localhost","estudante","123","ds302");
+  $mysqli = mysqli_connect("localhost","admin","123","bdsql");
 
 ?>
