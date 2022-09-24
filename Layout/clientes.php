@@ -1,7 +1,7 @@
 <?php  include "conecta_mysql.inc"; ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -22,9 +22,8 @@
         <div class="list-group list-group-flush my-3">
           <a href="perfil.html" class="list-group-item list-group-item-action bg-transparent  second-text fw-bold"><i
              class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-          <a href="servicos.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-            
-          <i class="fas fa-hospital me-2"></i>Serviços</a>
+          <a href="servicos.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+             class="fas fa-hospital me-2"></i>Serviços</a>
           <a href="funcionarios.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
              class="fas fa-clipboard me-2"></i>Funcionários</a>
           <a href="clientes.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
@@ -63,48 +62,52 @@
                 </div>
             </nav>
 
-            <?php 
+            <?php
 
-  if($operacao== "exibir"){
-    $sql= "SELECT * FROM cliente";
-    $res= mysqli_query($mysqli,$sql);
-    $linhas= mysqli_num_rows($res);
+            $sql= "SELECT * FROM paciente";
+            $res= mysqli_query($mysqli,$sql);
+            $linhas= mysqli_num_rows($res);
 
-    for ($i = 0; $i < $linhas; $i++){
-        $cliente = mysqli_fetch_array ($res);
-
-    }
-
-    echo "<div class='container'>
-    <h1>Tabela Básica</h1>
-    <table class='table'>
-    <thead>
-    <tr>
-    <th>Nome</th>
-    <th>Email</th>
-    <th>Data de Nascimento</th>
-    <th>Bandeira do Cartão</th>
-    </tr>
-    </thead>
-    ";for ($i = 0; $i < $linhas; $i++){
-        $cliente = mysqli_fetch_array ($res);
-
-        echo "<tbody>
-        <tr>
-        <td>".$cliente['nome']."</td>
-        <td>".$cliente['email']."</td>
-        <td>".$cliente['data_nasc']."</td>
-        <td>".$cliente['cartao']."</td>
-        </tr>
-        </tbody>
-        </table>
-        </div>
-        ";
-
-    };
-}               
-            
             ?>
+
+            <div class="block">
+            <div class='container'>
+                    <h1>Tabela Paciente</h1>
+                    <table class='table'>
+                    <thead>
+                    <tr>
+                    <th></th>
+                    <th>Nome</th>
+                    <th>CPF
+                    <th>Telefone</th>
+                    <th>Data de Nascimento</th>
+                    <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                         for ($i = 0; $i < $linhas; $i++){
+                            $paciente = mysqli_fetch_array ($res);
+                
+                            echo"
+                            <tr>
+                            <td>".$paciente['nome']."</td>
+                            <td>".$paciente['cpf']."</td>
+                            <td>".$paciente['telefone']."</td>
+                            <td>".$paciente['data_nasc']."</td>
+                            <td>".$paciente['email']."</td>
+                            </tr>";
+                        }
+                        ?>
+
+                    </tbody>
+                    </table>
+                    </div>
+                    </div>
+
+
+
+
     <!-- /#page-content-wrapper -->
     </div>
 
